@@ -45,19 +45,19 @@ func init() {
 	// To use the in-memory test database, uncomment the next line.
 	DB = newMemoryDB()
 
-	// [START cloudsql]
-	// To use Cloud SQL, uncomment the following lines, and update the username,
-	// password and instance connection string. When running locally,
-	// localhost:3306 is used, and the instance name is ignored.
-	// DB, err = configureCloudSQL(cloudSQLConfig{
-	// 	Username: "root",
-	// 	Password: "",
-	// 	// The connection name of the Cloud SQL v2 instance, i.e.,
-	// 	// "project:region:instance-id"
-	// 	// Cloud SQL v1 instances are not supported.
-	// 	Instance: "",
-	// })
-	// [END cloudsql]
+	[START cloudsql]
+	To use Cloud SQL, uncomment the following lines, and update the username,
+	password and instance connection string. When running locally,
+	localhost:3306 is used, and the instance name is ignored.
+	DB, err = configureCloudSQL(cloudSQLConfig{
+		Username: "root",
+		Password: "TurtlePrincess1990",
+		// The connection name of the Cloud SQL v2 instance, i.e.,
+		// "project:region:instance-id"
+		// Cloud SQL v1 instances are not supported.
+		Instance: "ace-shine-212419:us-east1:library",
+	})
+	[END cloudsql]
 
 	// [START mongo]
 	// To use Mongo, uncomment the next lines and update the address string and
