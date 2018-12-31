@@ -11,5 +11,5 @@ gcloud container clusters create bookshelf \
     --zone us-central1-a
 ```
 
-This code is copied and in some cases changed from this [repository](github.com/GoogleCloudPlatform/golang-samples/getting-started/bookshelf
+This code is copied and in some cases changed from this [repository](https://github.com/GoogleCloudPlatform/golang-samples/tree/master/getting-started/bookshelf
 )
