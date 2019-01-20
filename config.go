@@ -50,7 +50,7 @@ func init() {
 	password and instance connection string. When running locally,
 	localhost:3306 is used, and the instance name is ignored.
 	DB, err = configureCloudSQL(cloudSQLConfig{
-		Username: "root",
+		Username: "upmoji",
 		Password: "TurtlePrincess1990",
 		// The connection name of the Cloud SQL v2 instance, i.e.,
 		// "project:region:instance-id"

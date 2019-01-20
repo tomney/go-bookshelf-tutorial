@@ -12,5 +12,5 @@ env_variables:
 #
 # This should match the value in config.go
 beta_settings:
-#  cloud_sql_instances: INSTANCE_CONNECTION_NAME
+ cloud_sql_instances: ace-shine-212419:us-east1:library
 # [END cloudsql_settings]
