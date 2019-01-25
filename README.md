@@ -18,3 +18,8 @@ Local SQL instance listens on 127.0.0.1:3300. You can proxy to the cloudSQL inst
 ```
 ./cloud_sql_proxy -instances="ace-shine-212419:us-east1:library"=tcp:3300
 ```
+
+You can build the application's docker image by running: 
+```
+docker build -t gcr.io/ace-shine-212419/bookshelf .
+```

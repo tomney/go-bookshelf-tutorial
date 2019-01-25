@@ -40,7 +40,8 @@ func init() {
 
 // loginHandler initiates an OAuth flow to authenticate the user.
 func loginHandler(w http.ResponseWriter, r *http.Request) *appError {
-	sessionID := uuid.Must(uuid.NewV4()).String()
+	var err error
+	sessionID := uuid.Must(uuid.NewV4(), err).String()
 
 	oauthFlowSession, err := bookshelf.SessionStore.New(r, sessionID)
 	if err != nil {

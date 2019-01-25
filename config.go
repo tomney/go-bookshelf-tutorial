@@ -45,19 +45,19 @@ func init() {
 	// To use the in-memory test database, uncomment the next line.
 	DB = newMemoryDB()
 
-	[START cloudsql]
-	To use Cloud SQL, uncomment the following lines, and update the username,
-	password and instance connection string. When running locally,
-	localhost:3306 is used, and the instance name is ignored.
-	DB, err = configureCloudSQL(cloudSQLConfig{
-		Username: "upmoji",
-		Password: "TurtlePrincess1990",
-		// The connection name of the Cloud SQL v2 instance, i.e.,
-		// "project:region:instance-id"
-		// Cloud SQL v1 instances are not supported.
-		Instance: "ace-shine-212419:us-east1:library",
-	})
-	[END cloudsql]
+	// [START cloudsql]
+	// To use Cloud SQL, uncomment the following lines, and update the username,
+	// password and instance connection string. When running locally,
+	// localhost:3306 is used, and the instance name is ignored.
+	// DB, err = configureCloudSQL(cloudSQLConfig{
+	// 	Username: "upmoji",
+	// 	Password: "TurtlePrincess1990",
+	// 	// The connection name of the Cloud SQL v2 instance, i.e.,
+	// 	// "project:region:instance-id"
+	// 	// Cloud SQL v1 instances are not supported.
+	// 	Instance: "ace-shine-212419:us-east1:library",
+	// })
+	// [END cloudsql]
 
 	// [START mongo]
 	// To use Mongo, uncomment the next lines and update the address string and
@@ -73,7 +73,7 @@ func init() {
 	// More options can be set, see the google package docs for details:
 	// http://godoc.org/golang.org/x/oauth2/google
 	//
-	// DB, err = configureDatastoreDB("<your-project-id>")
+	DB, err = configureDatastoreDB("ace-shine-212419")
 	// [END datastore]
 
 	if err != nil {
@@ -84,8 +84,8 @@ func init() {
 	// To configure Cloud Storage, uncomment the following lines and update the
 	// bucket name.
 	//
-	// StorageBucketName = "<your-storage-bucket>"
-	// StorageBucket, err = configureStorage(StorageBucketName)
+	StorageBucketName = "ace-shine-212419"
+	StorageBucket, err = configureStorage(StorageBucketName)
 	// [END storage]
 
 	if err != nil {
@@ -114,7 +114,7 @@ func init() {
 	// [START pubsub]
 	// To configure Pub/Sub, uncomment the following lines and update the project ID.
 	//
-	// PubsubClient, err = configurePubsub("<your-project-id>")
+	PubsubClient, err = configurePubsub("ace-shine-212419")
 	// [END pubsub]
 
 	if err != nil {
